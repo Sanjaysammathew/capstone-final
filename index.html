@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Engine</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body id="main-body">
+    <header>
+        <h1>Image Search Engine</h1>
+    </header>
+    <main>
+        <form id="Search-form">
+            <input type="text" id="Search-box" placeholder="Enter a Text Here">
+            <button type="submit">Search</button>
+        </form>
+        <div id="Search-result"></div>
+        <button id="show-more-btn">Show More</button>
+        
+        <div id="customization-panel" class="hidden">
+            <h2>Customize Image</h2>
+            <input type="text" id="custom-text" placeholder="Enter your text">
+            <select id="font-select">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+            <input type="color" id="color-picker">
+            <input type="number" id="font-size" value="30">
+            <button id="apply-customization">Apply Customization</button>
+        </div>
+
+        <div id="filters" class="hidden">
+            <h3>Filters</h3>
+            <button data-filter="grayscale">Grayscale</button>
+            <button data-filter="sepia">Sepia</button>
+            <button data-filter="blur">Blur</button>
+        </div>
+
+        <div id="advanced-editing" class="hidden">
+            <h3>Advanced Editing</h3>
+            <button data-edit="brightness">Brightness</button>
+            <button data-edit="contrast">Contrast</button>
+            <button data-edit="saturation">Saturation</button>
+            <button data-edit="hue">Hue</button>
+        </div>
+
+        <canvas id="canvas" class="hidden"></canvas>
+        <button id="save-image" class="hidden">Save Image</button>
+
+        <h2>Gallery</h2>
+        <div id="gallery"></div>
+
+        <div id="collage-maker" class="hidden">
+            <h2>Create Collage</h2>
+            <div id="collage"></div>
+            <button id="create-collage">Create Collage</button>
+        </div>
+    </main>
+    
+    <script src="search.js"></script>
+</body>
+</html>
